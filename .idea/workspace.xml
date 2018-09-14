@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/matrix/MatrixTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
-              <caret line="143" column="1" lean-forward="true" selection-start-line="143" selection-start-column="1" selection-end-line="143" selection-end-column="1" />
+              <caret line="143" column="1" lean-forward="false" selection-start-line="143" selection-start-column="1" selection-end-line="143" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/gameoflife/GoL.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="358">
-              <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+              <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#269#270#0" expanded="true" />
@@ -77,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/matrix/MatrixMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -952,7 +952,7 @@
       <workItem from="1536183266999" duration="2938000" />
       <workItem from="1536758325028" duration="3131000" />
       <workItem from="1536831480713" duration="9273000" />
-      <workItem from="1536912142393" duration="12568000" />
+      <workItem from="1536912142393" duration="12927000" />
     </task>
     <servers />
   </component>
@@ -989,7 +989,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40936000" />
+    <option name="totallyTimeSpent" value="41295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1863,7 +1863,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/matrix/MatrixTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
-          <caret line="143" column="1" lean-forward="true" selection-start-line="143" selection-start-column="1" selection-end-line="143" selection-end-column="1" />
+          <caret line="143" column="1" lean-forward="false" selection-start-line="143" selection-start-column="1" selection-end-line="143" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1916,7 +1916,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/matrix/MatrixMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1934,7 +1934,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/gameoflife/GoL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
-          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+          <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#269#270#0" expanded="true" />
