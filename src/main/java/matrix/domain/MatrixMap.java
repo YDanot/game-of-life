@@ -1,4 +1,4 @@
-package matrix;
+package matrix.domain;
 
 import java.util.*;
 import java.util.function.Predicate;

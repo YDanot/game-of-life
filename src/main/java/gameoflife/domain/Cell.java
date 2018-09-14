@@ -1,10 +1,10 @@
-package gameoflife;
+package gameoflife.domain;
 
 public enum Cell {
     ALIVE{
         @Override
         public String toString() {
-            return "#";
+            return "*";
         }
     },DEAD{
         @Override

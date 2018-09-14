@@ -1,4 +1,4 @@
-package matrix;
+package matrix.domain;
 
 
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
-public class Mask {
+class Mask {
 
     private final Position positions[];
 
@@ -14,7 +14,7 @@ public class Mask {
         this.positions = positions;
     }
 
-    public static Mask adjacent(Position position) {
+    static Mask adjacent(Position position) {
         return new Mask(
                 Position.of(position.line() - 1, position.column()),
                 Position.of(position.line() - 1, position.column() + 1),
@@ -30,7 +30,7 @@ public class Mask {
 
     }
 
-    public List<Position> applyOn(Matrix matrixTab) {
+    List<Position> applyOn(Matrix matrixTab) {
         return Stream.of(positions).filter(p -> isValidOn(p, matrixTab)).collect(toList());
     }
 

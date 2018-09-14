@@ -1,4 +1,4 @@
-package matrix;
+package matrix.domain;
 
 
 public class Position {

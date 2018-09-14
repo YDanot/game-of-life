@@ -1,23 +1,26 @@
-package matrix;
+package matrix.domain;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class MatrixArrayList<E> implements Matrix<E> {
+public class MatrixArray<E> implements Matrix<E> {
 
-    private ArrayList<E> mat;
+    private E mat[];
     private final int width;
     private final int height;
 
-    public MatrixArrayList(int width, int height, Supplier<E> elementSupplier) {
+
+    public MatrixArray(int width, int height, Supplier<E> elementSupplier) {
         this.width = width;
         this.height = height;
-        mat = new ArrayList<>();
+
+        ArrayList<E> list = new ArrayList<>();
         for (int c = 0; c < width * height; c++) {
-            mat.add(elementSupplier.get());
+            list.add(elementSupplier.get());
         }
+        mat = (E[]) list.toArray();
     }
 
     public List<E> adjacentElementOf(Position position) {
@@ -37,22 +40,22 @@ public class MatrixArrayList<E> implements Matrix<E> {
 
 
     public void put(E element, Position p) {
-        mat.set(width * (p.line() - 1) + p.column() - 1, element);
+        mat[width * (p.line() - 1) + p.column() - 1] = element;
     }
 
     public E get(Position p) {
-        return mat.get(width * (p.line() - 1) + p.column() - 1);
+        return mat[width * (p.line() - 1) + p.column() - 1];
     }
 
     @Override
     public String toString() {
         String res = "";
 
-        for (int i = 0; i < mat.size(); i++) {
+        for (int i = 0; i < mat.length; i++) {
             if (i != 0 && i % width == 0) {
                 res += "\n";
             }
-            res += mat.get(i) + " ";
+            res += mat[i] + " ";
         }
         return res;
     }
@@ -60,11 +63,11 @@ public class MatrixArrayList<E> implements Matrix<E> {
     public Stream<Cell<E>> cellStream() {
         List<Cell<E>> cells = new ArrayList<>();
         int l = 1;
-        for (int i = 0; i < mat.size(); i++) {
+        for (int i = 0; i < mat.length; i++) {
             if (i != 0 && i % width == 0) {
                 l++;
             }
-            cells.add(new Cell<>(Position.of(l,(i % width) + 1), mat.get(i)));
+            cells.add(new Cell<>(Position.of(l, (i % width) + 1), mat[i]));
         }
 
         return cells.stream();
@@ -77,6 +80,5 @@ public class MatrixArrayList<E> implements Matrix<E> {
     public int height() {
         return height;
     }
-
 
 }

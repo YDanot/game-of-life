@@ -1,5 +1,8 @@
 package matrix;
 
+import matrix.domain.Matrix;
+import matrix.domain.MatrixSupplier;
+import matrix.domain.Position;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 

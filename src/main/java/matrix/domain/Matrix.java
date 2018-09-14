@@ -1,4 +1,4 @@
-package matrix;
+package matrix.domain;
 
 
 import java.util.List;
@@ -24,7 +24,7 @@ public interface  Matrix<E> {
         final Position position;
         final E element;
 
-        public Cell(Position position, E element) {
+        Cell(Position position, E element) {
             this.position = position;
             this.element = element;
         }

@@ -1,11 +1,15 @@
 package gameoflife;
 
-import matrix.*;
+import gameoflife.domain.Cell;
+import gameoflife.domain.GoL;
+import matrix.domain.Matrix;
+import matrix.domain.MatrixSupplier;
+import matrix.domain.Position;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import static gameoflife.Cell.ALIVE;
-import static gameoflife.Cell.DEAD;
+import static gameoflife.domain.Cell.ALIVE;
+import static gameoflife.domain.Cell.DEAD;
 
 public class GOLTests {
 
