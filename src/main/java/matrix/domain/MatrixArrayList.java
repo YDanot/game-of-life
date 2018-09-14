@@ -36,8 +36,8 @@ public class MatrixArrayList<E> implements Matrix<E> {
     }
 
 
-    public void put(E element, Position p) {
-        mat.set(width * (p.line() - 1) + p.column() - 1, element);
+    public void put(Cell<E> c) {
+        mat.set(width * (c.position().line() - 1) + c.position().column() - 1, c.element());
     }
 
     public E get(Position p) {

@@ -123,7 +123,7 @@ public class MatrixTests {
     public void an_element_can_be_add_to_matrix() {
         given_a_board(12, 12);
         Position p = Position.of(4, 5);
-        matrix.put("ELEMENT", p);
+        matrix.put(new Matrix.Cell<>(p,"ELEMENT"));
         assertThat(matrix.get(p)).isEqualTo("ELEMENT");
     }
 

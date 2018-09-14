@@ -1,7 +1,7 @@
 package gameoflife.infra;
 
 import gameoflife.domain.Cell;
-import gameoflife.domain.GoL;
+import gameoflife.domain.Environment;
 import matrix.domain.Matrix;
 import matrix.domain.MatrixSupplier;
 import matrix.domain.Position;
@@ -18,11 +18,11 @@ import static gameoflife.domain.Cell.DEAD;
 @RestController
 public class Controller {
 
-    private GoL gol;
+    private Environment gol;
 
     public Controller() {
         Matrix<Cell> matrix = new MatrixSupplier<Cell>().getInstance(10, 10, () -> new Random().nextBoolean() ? ALIVE: DEAD);
-        gol = new GoL(matrix);
+        gol = new Environment(matrix);
     }
 
     @RequestMapping(value = "/gol", method = RequestMethod.GET)

@@ -12,7 +12,7 @@ public class MatrixArray<E> implements Matrix<E> {
     private final int height;
 
 
-    public MatrixArray(int width, int height, Supplier<E> elementSupplier) {
+    MatrixArray(int width, int height, Supplier<E> elementSupplier) {
         this.width = width;
         this.height = height;
 
@@ -39,8 +39,8 @@ public class MatrixArray<E> implements Matrix<E> {
     }
 
 
-    public void put(E element, Position p) {
-        mat[width * (p.line() - 1) + p.column() - 1] = element;
+    public void put(Cell<E> c) {
+        mat[width * (c.position().line() - 1) + c.position().column() - 1] = c.element();
     }
 
     public E get(Position p) {

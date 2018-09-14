@@ -34,9 +34,9 @@ public class MatrixArrayList2D<E> implements Matrix<E> {
         return Mask.adjacent(position).applyOn(this);
     }
 
-
-    public void put(E element, Position position) {
-        mat.get(position.line() - 1).set(position.column() - 1, element);
+    @Override
+    public void put(Cell<E> c) {
+        mat.get(c.position().line() - 1).set(c.position().column() - 1, c.element());
     }
 
     public E get(Position position) {

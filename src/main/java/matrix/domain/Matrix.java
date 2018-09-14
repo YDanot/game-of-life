@@ -10,7 +10,7 @@ public interface  Matrix<E> {
 
     List<Position> adjacentPositionOf(Position position);
 
-    void put(E element, Position position) ;
+    void put(Cell<E> c);
 
     E get(Position p);
 
@@ -24,7 +24,7 @@ public interface  Matrix<E> {
         final Position position;
         final E element;
 
-        Cell(Position position, E element) {
+        public Cell(Position position, E element) {
             this.position = position;
             this.element = element;
         }

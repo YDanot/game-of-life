@@ -56,8 +56,8 @@ public class MatrixMap<E> implements Matrix<E> {
     }
 
     @Override
-    public void put(E element, Position position) {
-        positionCellMap.put(position, element);
+    public void put(Cell<E> cell) {
+        positionCellMap.put(cell.position(), cell.element());
     }
 
     @Override

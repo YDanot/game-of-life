@@ -1,7 +1,7 @@
 package gameoflife;
 
 import gameoflife.domain.Cell;
-import gameoflife.domain.GoL;
+import gameoflife.domain.Environment;
 import matrix.domain.Matrix;
 import matrix.domain.MatrixSupplier;
 import matrix.domain.Position;
@@ -13,7 +13,7 @@ import static gameoflife.domain.Cell.DEAD;
 
 public class GOLTests {
 
-    private GoL gol;
+    private Environment gol;
 
     @Test
     public void circle_environment_example() {
@@ -54,7 +54,7 @@ public class GOLTests {
     }
 
     private void then_center_cell_should_be(Cell cell) {
-        Assertions.assertThat(gol.matrix().get(Position.of(2,2))).isEqualTo(cell);
+        Assertions.assertThat(gol.matrix().get(Position.of(2, 2))).isEqualTo(cell);
     }
 
     @Test
@@ -133,7 +133,7 @@ public class GOLTests {
     }
 
     private void given_an_environment(String... lines) {
-        gol = new GoL(buildMatrix(lines));
+        gol = new Environment(buildMatrix(lines));
     }
 
     private Matrix<Cell> buildMatrix(String... lines) {
@@ -142,7 +142,7 @@ public class GOLTests {
         for (int l = 1; l <= lines.length; l++) {
             String[] columns = lines[l - 1].split(" ");
             for (int c = 1; c <= columns.length; c++) {
-                cellMatrix.put((columns[c - 1].equals(".") ? DEAD : ALIVE), Position.of(l, c));
+                cellMatrix.put(new Matrix.Cell<>(Position.of(l, c), columns[c - 1].equals(".") ? DEAD : ALIVE));
             }
         }
         return cellMatrix;
